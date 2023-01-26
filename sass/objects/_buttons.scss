@@ -2,7 +2,7 @@
  * sass/objects/buttons.scss
  * @package scgolfpanel
  * @author Scott Shealy
- * @version 1.0.0
+ * @version 1.0.0 (2023.01.23)
  * @copyright 2023
 **/
 
@@ -21,19 +21,27 @@
 
     // BUTTON-SOLID
         $button-solid-border: $button-border-weight solid $button-solid-text-color;
+        $button-solid-hover-color: mix($link-hover-adjustment, $button-solid-color, $color-adjustment * $link-hover-adjustment-amount);
+        $button-solid-hover-text-color: mix($color-adjustment-light, $button-solid-hover-color, $color-adjustment * 12);
         $button-solid-hover-border: $button-border-weight solid $button-solid-hover-text-color;
 
     // BUTTON-ALT
         $button-alt-border: $button-border-weight solid $button-alt-text-color;
+        $button-alt-hover-color: $button-alt-text-color;
+        $button-alt-hover-text-color: mix($color-adjustment-light, $button-alt-hover-color, $color-adjustment * 12);
         $button-alt-hover-border: $button-border-weight solid $button-alt-hover-text-color;
 
     // BUTTON-GHOST
         $button-ghost-border: $button-border-weight solid $button-ghost-text-color;
+        $button-ghost-hover-color: $button-ghost-text-color;
+        $button-ghost-hover-text-color: mix($color-adjustment-light, $button-ghost-hover-color, $color-adjustment * 12);
         $button-ghost-hover-border: $button-border-weight solid $button-ghost-hover-text-color;
 
     // BUTTON-MOBILE
-        $button-mobile-border: $button-border-weight solid $button-mobile-text-color;
-        $button-mobile-hover-border: $button-border-weight solid $button-mobile-hover-text-color;
+        $button-mobile-border: $button-solid-border;
+        $button-mobile-hover-color: $button-solid-hover-color;
+        $button-mobile-hover-text-color: $button-solid-hover-text-color;
+        $button-mobile-hover-border: $button-solid-hover-border;
 
 // STYLES
     #{$button-all} {
@@ -41,6 +49,7 @@
             display: inline-block;
             margin: $button-margin-vertical $button-margin-horizontal;
             padding: $button-padding-vertical $button-padding-horizontal;
+            border-radius: $button-border-radius;
             font-family: $button-text;
             font-size: $button-text-size;
             font-weight: $button-font-weight;
@@ -50,12 +59,6 @@
             &:hover {
                 cursor: pointer;
             } //:HOVER
-
-            i {
-                display: inline-block;
-                margin-left: $margin-none;
-                margin-right: $margin-xs;
-            } //I
 
         // MOBILE
             @media #{$media-xs} {} //.COL-XS
@@ -68,6 +71,25 @@
             @media #{$media-lg} {} //.COL-LG
             @media #{$media-xl} {} //.COL-XL
             @media #{$media-xxl} {} //.COL-XXL
+
+        i {
+            // GLOBAL
+                display: inline-block;
+                margin-left: $margin-none;
+                margin-right: $margin-xs;
+
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {} //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //I
     } //.BUTTON-ALL
 
     #{$button-solid} {

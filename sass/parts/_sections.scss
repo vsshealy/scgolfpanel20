@@ -1,0 +1,177 @@
+/**
+ * sass/parts/sections.scss
+ * @package scgolfpanel
+ * @author Scott Shealy
+ * @version 1.0.0 (2023.01.24)
+ * @copyright 2023
+**/
+
+// VARIABLES
+// STYLES
+    .section {
+        // GLOBAL
+        // MOBILE
+            @media #{$media-xs} {} //.COL-XS
+            @media #{$media-sm} {} //.COL-SM
+            @media #{$media-md} {} //.COL-MD
+            @media #{$device-mobile} {} //.MOBILE
+
+        // DESKTOP
+            @media #{$device-desktop} {} //.DESKTOP
+            @media #{$media-lg} {
+                padding: $section-padding;
+            } //.COL-LG
+            @media #{$media-xl} {} //.COL-XL
+            @media #{$media-xxl} {} //.COL-XXL
+
+        & > .elementor-background-overlay {
+            // GLOBAL
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {} //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //.ELEMENTOR-BACKGROUND-OVERLAY
+
+        & > .elementor-container {
+            // GLOBAL
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {} //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //.ELEMENTOR-CONTAINER
+
+        .wrapper-content {
+            // GLOBAL
+                padding-top: $section-padding;
+                padding-bottom: $section-padding;
+
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {} //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+
+            & > .elementor-widget-wrap > .row {
+                // GLOBAL
+                // MOBILE
+                    @media #{$media-xs} {} //.COL-XS
+                    @media #{$media-sm} {} //.COL-SM
+                    @media #{$media-md} {} //.COL-MD
+                    @media #{$device-mobile} {} //.MOBILE
+
+                // DESKTOP
+                    @media #{$device-desktop} {} //.DESKTOP
+                    @media #{$media-lg} {} //.COL-LG
+                    @media #{$media-xl} {} //.COL-XL
+                    @media #{$media-xxl} {} //.COL-XXL
+
+                & > .elementor-container {
+                    // GLOBAL
+                    // MOBILE
+                        @media #{$media-xs} {} //.COL-XS
+                        @media #{$media-sm} {} //.COL-SM
+                        @media #{$media-md} {} //.COL-MD
+                        @media #{$device-mobile} {} //.MOBILE
+
+                    // DESKTOP
+                        @media #{$device-desktop} {} //.DESKTOP
+                        @media #{$media-lg} {} //.COL-LG
+                        @media #{$media-xl} {} //.COL-XL
+                        @media #{$media-xxl} {} //.COL-XXL
+
+                    & > .elementor-column.columns {
+                        // GLOBAL
+                            padding-top: $body-gutter-columns;
+                            padding-bottom: $body-gutter-columns;
+                            align-items: center;
+
+                        // MOBILE
+                            @media #{$media-xs} {} //.COL-XS
+                            @media #{$media-sm} {} //.COL-SM
+                            @media #{$media-md} {} //.COL-MD
+                            @media #{$device-mobile} {} //.MOBILE
+
+                        // DESKTOP
+                            @media #{$device-desktop} {} //.DESKTOP
+                            @media #{$media-lg} {} //.COL-LG
+                            @media #{$media-xl} {} //.COL-XL
+                            @media #{$media-xxl} {} //.COL-XXL
+                    } //.COLUMNS
+                } //.ELEMENTOR-CONTAINER
+            } //.ROW
+        } //.WRAPPER-CONTENT
+
+        .elementor-widget {
+            // GLOBAL
+                margin-top: $body-container-margin;
+                margin-bottom: $body-container-margin;
+
+                &:first-child {
+                    margin-top: $margin-none;
+                } //:FIRST-CHILD
+
+                &:last-child {
+                    margin-bottom: $margin-none;
+                } //:LAST-CHILD
+
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {} //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //.ELEMENTOR-WIDGET
+
+        .elementor-heading-title {
+            // GLOBAL
+            // MOBILE
+                @media #{$media-xs} {
+                    font-size: $section-heading-font-size-xs;
+                } //.COL-XS
+                @media #{$media-sm} {
+                    font-size: $section-heading-font-size-sm;
+                } //.COL-SM
+                @media #{$media-md} {
+                    font-size: $section-heading-font-size-md;
+                } //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {
+                    font-size: $section-heading-font-size-lg;
+                } //.COL-LG
+                @media #{$media-xl} {
+                    font-size: $section-heading-font-size-xl;
+                } //.COL-XL
+                @media #{$media-xxl} {
+                    font-size: $section-heading-font-size-xxl;
+                } //.COL-XXL
+        } //.ELEMENTOR-HEADING-TITLE
+
+    } //.SECTION

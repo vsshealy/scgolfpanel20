@@ -22,46 +22,56 @@
         $color-scgolfpanel-gray: #444544;
         $color-scgolfpanel-blue: #0072bb;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "variables/colors";
 
 // UNITS
     // SETTINGS
         $base-unit: 1.00rem;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "variables/units";
 
 // MEDIA QUERIES
     // SETTINGS
-        $media-breakpoint-xs: 575px;
-        $media-breakpoint-sm: 576px;
-        $media-breakpoint-md: 768px;
-        $media-breakpoint-lg: 992px;
-        $media-breakpoint-xl: 1200px;
-        $media-breakpoint-xxl: 1440px;
+        // SITE WIDTH
+            $site-width-content: 1920px;
+            $site-width-min: 100.00%;
+            $site-width-max: 100.00%;
 
-    // LOAD | PARTIALS
+        // BREAKPOINTS
+            $media-breakpoint-xs: 575px;
+            $media-breakpoint-sm: 576px;
+            $media-breakpoint-md: 768px;
+            $media-breakpoint-lg: 992px;
+            $media-breakpoint-xl: 1200px;
+            $media-breakpoint-xxl: 1440px;
+
+        // DEVICE BREAKPOINTS
+            $media-breakpoint-device: $media-breakpoint-lg;
+
+    // PARTIALS
         @import "variables/media";
 
 // WRAPPERS
     // SETTINGS
-        $site-width-content: 1920px;
-        $site-width-min: 100.00%;
-        $site-width-max: 100.00%;
         $body-gutter: 1.00rem;
         $body-gutter-mobile: 1.00rem;
-        $body-gutter-columns: ($body-gutter * 0.50);
+        $body-container-margin: $margin-sm;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "layouts/wrappers";
 
 // LINKS
     // SETTINGS
         $link-color: $color-scgolfpanel-green-0;
         $link-hover-color: $color-scgolfpanel-green-dark-3;
+        
+        // GLOBAL ADJUSTMENTS
+            $link-hover-adjustment: $color-adjustment-dark;
+            $link-hover-adjustment-amount: 3;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/links";
 
 // SHADOWS
@@ -69,7 +79,7 @@
         $shadow-main: 0.00rem 0.00rem 0.50rem rgba($color-grayscale-dark-9, 0.10);
         $shadow-text: 0.00rem 0.00rem 0.50rem rgba($color-grayscale-dark-9, 0.80);
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/shadows";
 
 // TEXT
@@ -87,26 +97,33 @@
             $font-size-xl: 16px;
             $font-size-xxl: 18px;
 
+        // COLORS
+            $text-color-normal: $color-grayscale-dark-6;
+            $text-color-alt: $color-scgolfpanel-brown;
+            $text-color-link: $link-color;
+            $text-color-light: $color-grayscale-light-12;
+            $text-color-dark: $color-grayscale-dark-6;
+
         // HEADINGS
             $heading-text: $font-serif;
-            $heading-text-color: $color-scgolfpanel-brown-0;
+            $heading-text-color: $text-color-alt;
 
         // BODY
             $body-text: $font-sans;
-            $body-text-color: $color-grayscale-dark-6;
-
+            $body-text-color: $text-color-normal;
+        
         // LINKS
-            $text-link-color: $link-color;
+            $text-link-color: $text-color-link;
             $text-link-hover-color: $link-hover-color;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/text";
 
 // SITE LAYOUT
     // SETTINGS
         $body-background-color: $color-grayscale-light-9;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "layouts/site";
         @import "layouts/clearfix";
         @import "layouts/devices";
@@ -124,74 +141,158 @@
         $border-outline: $border-outline-weight solid $border-color;
         $border-section: $border-width solid $border-color;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/borders";
 
 // BUTTONS
     // SETTINGS
         $button-text: $body-text;
         $button-color: $link-color;
-        $button-margin-horizontal: $margin-sm;
-        $button-margin-vertical: $margin-md;
+        $button-border-radius: 0.25rem;
+        $button-margin-vertical: $margin-sm;
+        $button-margin-horizontal: $margin-md;
+        $button-padding-vertical: $padding-xs;
         $button-padding-horizontal: $padding-md;
-        $button-padding-vertical: $padding-xxs;
 
         // BUTTON-SOLID
             $button-solid-color: $button-color;
-            $button-solid-text-color: mix($color-adjustment-light, $button-solid-color, $color-adjustment * 12);
-            $button-solid-hover-color: mix($color-adjustment-light, $button-solid-color, $color-adjustment * 3);
-            $button-solid-hover-text-color: mix($color-adjustment-light, $button-solid-color, $color-adjustment * 12);
+            $button-solid-text-color: $text-color-light;
 
         // BUTTON-ALT
-            $button-alt-color: mix($color-adjustment-light, $button-color, $color-adjustment * 12);
+            $button-alt-color: $color-grayscale-light-12;
             $button-alt-text-color: $button-color;
-            $button-alt-hover-color: $button-color;
-            $button-alt-hover-text-color: mix($color-adjustment-light, $button-alt-hover-color, $color-adjustment * 12);
 
         // BUTTON-GHOST
             $button-ghost-color: transparent;
             $button-ghost-text-color: $button-color;
-            $button-ghost-hover-color: $button-color;
-            $button-ghost-hover-text-color: mix($color-adjustment-light, $button-ghost-hover-color, $color-adjustment * 12);
 
         // BUTTON-MOBILE
             $button-mobile-color: $button-solid-color;
             $button-mobile-text-color: $button-solid-text-color;
-            $button-mobile-hover-color: $button-solid-hover-color;
-            $button-mobile-hover-text-color: $button-solid-hover-text-color;
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/buttons";
 
 // BACKGROUNDS
     // SETTINGS
-        $background-color-1: $color-scgolfpanel-brown;
-        $background-color-2: $color-scgolfpanel-beige;
-        $background-color-3: $color-scgolfpanel-green;
-        $background-color-4: $color-scgolfpanel-gray;
-        $background-color-5: $color-scgolfpanel-blue;
+        // BACKGROUND-1
+            $background-1-color: $color-scgolfpanel-brown;
+            $background-1-text-color: $text-color-light;
 
-    // LOAD | PARTIALS
+        // BACKGROUND-2
+            $background-2-color: $color-scgolfpanel-beige;
+            $background-2-text-color: $color-scgolfpanel-brown;
+
+        // BACKGROUND-3
+            $background-3-color: $color-scgolfpanel-green;
+            $background-3-text-color: $text-color-light;
+
+        // BACKGROUND-4
+            $background-4-color: $color-scgolfpanel-gray;
+            $background-4-text-color: $text-color-light;
+
+        // BACKGROUND-5
+            $background-5-color: $color-scgolfpanel-blue;
+            $background-5-text-color: $text-color-light;
+
+    // PARTIALS
         @import "objects/backgrounds";
 
 // GRADIENTS
     // SETTINGS
         $gradient-1: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
-        $gradient-2: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-2: linear-gradient(0deg, rgba($color-scgolfpanel-green-dark-10, 0.95) 0.00%, rgba($color-scgolfpanel-green-dark-2, 0.85) 50.00%, rgba($color-scgolfpanel-green-0, 0.60) 100.00%);
         $gradient-3: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
         $gradient-4: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
         $gradient-5: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
 
-    // LOAD | PARTIALS
+    // PARTIALS
         @import "objects/gradients";
 
 // EXTERNAL
     // BOOTSTRAP
         // SETTINGS
-        // LOAD | PARTIALS
+        // PARTIALS
             @import "external/bootstrap";
-    
+
     // ELEMENTOR
         // SETTINGS
-        // LOAD | PARTIALS
+        // PARTIALS
             @import "external/elementor";
+
+// HEADER
+    // SETTINGS
+        $header-primary-background-color: transparent;
+        $header-primary-text-color: $color-grayscale-light-12;
+        $header-padding-mobile: $padding-lg;
+        $header-padding-desktop: 4.00rem;
+
+    // PARTIALS
+        @import "parts/header";
+
+// FOOTER
+    // SETTINGS
+        // FOOTER-PRIMARY
+            $footer-primary-overlay: $gradient-2;
+            $footer-primary-text-color: $color-grayscale-light-12;
+
+        // FOOTER-SECONDARY
+            $footer-secondary-background: $color-grayscale-dark-12;
+            $footer-secondary-text-color: $color-grayscale-light-12;
+
+    // PARTIALS
+        @import "parts/footer";
+
+// HEROES
+    // SETTINGS
+        // HERO-PRIMARY
+            $hero-primary-height: 100.00vh;
+            $hero-primary-overlay: $gradient-1;
+
+        // HERO-SECONDARY
+            $hero-secondary-height: 40.00vh;
+            $hero-secondary-overlay: $gradient-1;
+
+    // PARTIALS
+        @import "parts/heroes";
+
+// BANNERS
+    // SETTINGS
+        $banner-height: 25.00vh;
+
+        // WRAPPERS
+            $banner-padding-xs: $padding-md;
+            $banner-padding-sm: $padding-md;
+            $banner-padding-md: $padding-md;
+            $banner-padding-lg: $padding-md;
+            $banner-padding-xl: $padding-md;
+            $banner-padding-xxl: $padding-md;
+
+        // BANNER-TEXT
+            $banner-text-background: $color-scgolfpanel-brown;
+            $banner-text-color: $color-scgolfpanel-brown-light-12;
+
+    // PARTIALS
+        @import "parts/banners";
+
+// SECTIONS
+    // SETTINGS
+        $section-padding: $body-gutter;
+        $section-heading-font-size-xs: 2.00em;
+        $section-heading-font-size-sm: 2.50em;
+        $section-heading-font-size-md: 2.50em;
+        $section-heading-font-size-lg: 3.00em;
+        $section-heading-font-size-xl: 3.25em;
+        $section-heading-font-size-xxl: 3.25em;
+
+    // PARTIALS
+        @import "parts/sections";
+
+// PAGES
+    // INDEX
+        // SETTINGS
+            $index-rankings-background: $background-2-color;
+            $index-rankings-border: $color-scgolfpanel-brown;
+
+        // PARTIALS
+            @import "pages/index";

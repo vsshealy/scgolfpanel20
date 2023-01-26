@@ -1,0 +1,84 @@
+/**
+ * sass/pages/sections/rankings.scss
+ * @package scgolfpanel
+ * @author Scott Shealy
+ * @version 1.0.0 (2023.01.25)
+ * @copyright 2023
+**/
+
+// VARIABLES
+// STYLES
+    #rankings {
+        // GLOBAL
+            background-color: $index-rankings-background;
+
+        // MOBILE
+            @media #{$media-xs} {} //.COL-XS
+            @media #{$media-sm} {} //.COL-SM
+            @media #{$media-md} {} //.COL-MD
+            @media #{$device-mobile} {} //.MOBILE
+
+        // DESKTOP
+            @media #{$device-desktop} {} //.DESKTOP
+            @media #{$media-lg} {} //.COL-LG
+            @media #{$media-xl} {} //.COL-XL
+            @media #{$media-xxl} {} //.COL-XXL
+
+        & > .elementor-container {
+            // GLOBAL
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {} //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {
+                    border: $border-width solid $index-rankings-border;
+                } //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //.ELEMENTOR-CONTAINER
+
+        .elementor-widget-button {
+            // GLOBAL
+                padding-left: $padding-none !important;
+                padding-right: $padding-none !important;
+
+                &:last-child {
+                    margin-bottom: $body-container-margin;
+                } //:LAST-CHILD
+
+            // MOBILE
+                @media #{$media-xs} {} //.COL-XS
+                @media #{$media-sm} {} //.COL-SM
+                @media #{$media-md} {
+                    margin-bottom: $margin-none;
+
+                    &:last-child {
+                        margin-bottom: $margin-none;
+                    } //:LAST-CHILD
+                } //.COL-MD
+                @media #{$device-mobile} {} //.MOBILE
+
+            // DESKTOP
+                @media #{$device-desktop} {} //.DESKTOP
+                @media #{$media-lg} {
+                    margin-top: $body-container-margin;
+                    padding-right: $body-gutter-columns !important;
+
+                    &:first-child {
+                        padding-left: $padding-none !important;
+                    } //:FIRST-CHILD
+
+                    &:last-child {
+                        padding-left: $body-gutter-columns !important;
+                        padding-right: $padding-none !important;
+                    } //:LAST-CHILD
+                } //.COL-LG
+                @media #{$media-xl} {} //.COL-XL
+                @media #{$media-xxl} {} //.COL-XXL
+        } //.ELEMENTOR-WIDGET-BUTTON
+
+    } //#RANKINGS

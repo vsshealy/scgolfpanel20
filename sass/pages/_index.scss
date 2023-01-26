@@ -1,14 +1,13 @@
 /**
- * sass/objects/links.scss
+ * sass/pages/index.scss
  * @package scgolfpanel
  * @author Scott Shealy
- * @version 1.0.0 (2023.01.22)
+ * @version 1.0.0 (2023.01.25)
  * @copyright 2023
 **/
 
-// VARIABLES
 // STYLES
-    .link {
+    body#index {
         // GLOBAL
         // MOBILE
             @media #{$media-xs} {} //.COL-XS
@@ -21,4 +20,8 @@
             @media #{$media-lg} {} //.COL-LG
             @media #{$media-xl} {} //.COL-XL
             @media #{$media-xxl} {} //.COL-XXL
-    } //.LINK
+
+        // #RANKINGS
+            @import "sections/rankings";
+
+    } //#INDEX

@@ -2,7 +2,7 @@
  * sass/objects/text.scss
  * @package scgolfpanel
  * @author Scott Shealy
- * @version 1.0.0
+ * @version 1.0.0 (2023.01.23)
  * @copyright 2023
 **/
 
@@ -28,9 +28,9 @@
         $text-headings-h4: "h4, .h4, h4.elementor-heading-title";
         $text-headings-h5: "h5, .h5, h5.elementor-heading-title";
         $text-headings-h6: "h6, .h6, h6.elementor-heading-title";
+        $text-headings-all: "#{$text-headings-h1}, #{$text-headings-h2}, #{$text-headings-h3}, #{$text-headings-h4}, #{$text-headings-h5}, #{$text-headings-h6}";
         $text-headings-primary: "#{$text-headings-h1}, #{$text-headings-h2}, #{$text-headings-h3}";
         $text-headings-secondary: "#{$text-headings-h4}, #{$text-headings-h5}, #{$text-headings-h6}";
-        $text-headings-all: "#{$text-headings-h1}, #{$text-headings-h2}, #{$text-headings-h3}, #{$text-headings-h4}, #{$text-headings-h5}, #{$text-headings-h6}";
 
     // BODY
         $text-body-p: "p, .p";
@@ -49,10 +49,18 @@
     // HEADINGS
         $heading-text-size: $font-size-base * 1.00;
         $heading-text-size-increase: 0.25;
-        $heading-text-style: normal;
-        $heading-text-height: $line-height-normal;
+        $heading-text-style: none;
+        $heading-text-height: $line-height-condensed;
         $heading-text-spacing: $letter-spacing-normal;
         $heading-text-margin: $margin-md;
+        
+        // HEADING-PRIMARY-TEXT
+            $heading-primary-text: $heading-text;
+            $heading-primary-text-color: $heading-text-color;
+
+        // HEADING-SECONDARY-TEXT
+            $heading-secondary-text: $body-text;
+            $heading-secondary-text-color: $body-text-color;
 
     // BODY
         $body-text-size: $font-size-base;
@@ -87,13 +95,13 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-ALL
+        } //TEXT-HEADINGS-ALL
 
         #{$text-headings-primary} {
             // GLOBAL
-                font-family: $heading-text;
+                font-family: $heading-primary-text;
                 font-weight: 400;
-                color: $heading-text-color;
+                color: $heading-primary-text-color;
 
             // MOBILE
                 @media #{$media-xs} {} //.COL-XS
@@ -106,13 +114,13 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-PRIMARY
+        } //TEXT-HEADINGS-PRIMARY
 
         #{$text-headings-secondary} {
             // GLOBAL
-                font-family: $body-text;
+                font-family: $heading-secondary-text;
                 font-weight: 700;
-                color: $body-text-color;
+                color: $heading-secondary-text-color;
 
             // MOBILE
                 @media #{$media-xs} {} //.COL-XS
@@ -125,7 +133,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-SECONDARY
+        } //TEXT-HEADINGS-SECONDARY
 
         #{$text-headings-h1} {
             // GLOBAL
@@ -142,7 +150,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H1
+        } //TEXT-HEADINGS-H1
 
         #{$text-headings-h2} {
             // GLOBAL
@@ -159,7 +167,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H2
+        } //TEXT-HEADINGS-H2
 
         #{$text-headings-h3} {
             // GLOBAL
@@ -176,7 +184,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H3
+        } //TEXT-HEADINGS-H3
 
         #{$text-headings-h4} {
             // GLOBAL
@@ -193,7 +201,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H4
+        } //TEXT-HEADINGS-H4
 
         #{$text-headings-h5} {
             // GLOBAL
@@ -210,7 +218,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H5
+        } //TEXT-HEADINGS-H5
 
         #{$text-headings-h6} {
             // GLOBAL
@@ -227,7 +235,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-HEADINGS-H6
+        } //TEXT-HEADINGS-H6
 
     // BODY
         #{$text-body-all} {
@@ -249,7 +257,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-BODY-ALL
+        } //TEXT-BODY-ALL
 
         #{$text-body-p} {
             // GLOBAL
@@ -266,7 +274,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-BODY-P
+        } //TEXT-BODY-P
 
         #{$text-body-li} {
             // GLOBAL
@@ -283,7 +291,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-BODY-LI
+        } //TEXT-BODY-LI
 
         #{$text-body-span} {
             // GLOBAL
@@ -298,7 +306,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-BODY-SPAN
+        } //TEXT-BODY-SPAN
 
     // LINKS
         #{$text-links-all} {
@@ -322,7 +330,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-LINKS-ALL
+        } //TEXT-LINKS-ALL
 
         #{$text-links} {
             // GLOBAL
@@ -337,7 +345,7 @@
                 @media #{$media-lg} {} //.COL-LG
                 @media #{$media-xl} {} //.COL-XL
                 @media #{$media-xxl} {} //.COL-XXL
-        } // TEXT-LINKS
+        } //TEXT-LINKS
 
     // GLOBAL
         .text {
